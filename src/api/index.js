@@ -1,19 +1,15 @@
-let baseUrl = "http://localhost:8080";
+import ajax from "./ajax";
 
-export const useTest = () => {
-  baseUrl = "http://localhost:3000";
-};
+const baseUrl = "http://localhost:8080";
 
 export const getUserInfo = async (userId) => {
-  const fetchData = await fetch(`${baseUrl}/users/${userId}`);
-  const result = await fetchData.json();
-  return result;
+  const url = `${baseUrl}/users/${userId}`;
+  return ajax(url);
 };
 
 export const getEducationsByUserId = async (userId) => {
-  const fetchData = await fetch(`${baseUrl}/users/${userId}/educations`);
-  const result = await fetchData.json();
-  return result;
+  const url = `${baseUrl}/users/${userId}/educations`;
+  return ajax(url);
 };
 
 export const createUser = async (user) => {

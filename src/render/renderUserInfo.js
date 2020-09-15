@@ -5,7 +5,6 @@ const renderUserInfo = (user) => {
   $(".header-description").html(
     `MY NAME IS ${user.name} ${user.age}YO AND THIS IS MY RESUME/CV`
   );
-
   $(".about-description").html(user.description);
 };
 

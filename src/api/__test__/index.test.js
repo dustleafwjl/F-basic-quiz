@@ -1,12 +1,12 @@
-import { getUserInfo, getEducationsByUserId, useTest } from "../index";
+import { getUserInfo, getEducationsByUserId } from "../index";
+
+jest.mock("../ajax");
 
 describe("api", () => {
   test("should get user info", async () => {
-    useTest();
-    expect(getUserInfo(1)).toEqual(expect.any(Promise));
+    await expect(getUserInfo(1)).resolves.toEqual({});
   });
   test("should get education by user id", async () => {
-    useTest();
-    expect(getEducationsByUserId(1)).toEqual(expect.any(Promise));
+    await expect(getEducationsByUserId(1)).resolves.toEqual({});
   });
 });

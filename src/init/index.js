@@ -1,6 +1,5 @@
 import { getUserInfo, getEducationsByUserId } from "../api";
-import renderUserInfo from "../render/renderUserInfo";
-import renderEducation from "../render/renderEducation";
+import { renderUserInfo, renderEducation } from "../render";
 
 const initUserId = 1;
 
