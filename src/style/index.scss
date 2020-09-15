@@ -3,7 +3,30 @@
 @import "reboot";
 
 .app {
-  width: 800px;
-  margin: 0 auto;
+  width: 1000px;
+  margin: 100px auto;
   background-color: $white;
+  border-radius: 4px;
+}
+.header {
+  position: relative;
+  padding: 0px 20px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  &-avatar {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: $image-size;
+    height: $image-size;
+    border-radius: 50%;
+    background-color: res;
+  }
+  &-hello {
+    padding-top: 60px;
+  }
+  &-description {
+    font-size: 20px;
+  }
 }
