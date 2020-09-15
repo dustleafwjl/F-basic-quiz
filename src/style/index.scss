@@ -32,3 +32,27 @@
     font-size: 20px;
   }
 }
+
+.education {
+  &-element {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+  }
+  .element-year {
+    flex: 1;
+    height: 100%;
+  }
+  .element-experience {
+    flex: 8;
+    padding: 6px 10px;
+    background-color: $gray-light;
+    &-event {
+      font-weight: bolder;
+      color: $black;
+    }
+    p {
+      margin: 4px;
+    }
+  }
+}
