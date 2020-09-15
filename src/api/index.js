@@ -1,4 +1,8 @@
-const baseUrl = "http://localhost:8080";
+let baseUrl = "http://localhost:8080";
+
+export const useTest = () => {
+  baseUrl = "http://localhost:3000";
+};
 
 export const getUserInfo = async (userId) => {
   const fetchData = await fetch(`${baseUrl}/users/${userId}`);

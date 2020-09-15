@@ -1,6 +1,6 @@
 import $ from "jquery";
 
-const renderEducation = (educations) => {
+export const getEducationHtml = (educations) => {
   let educationHtml = "";
   educations.forEach((education) => {
     const itemHtml = `<section class="education-element">
@@ -18,6 +18,11 @@ const renderEducation = (educations) => {
     </section>`;
     educationHtml += itemHtml;
   });
+  return educationHtml;
+};
+
+const renderEducation = (educations) => {
+  const educationHtml = getEducationHtml(educations);
   $(".education-list").html(educationHtml);
 };
 
