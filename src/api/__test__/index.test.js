@@ -17,6 +17,7 @@ describe("api", () => {
     await expect(getUserInfo(1)).resolves.toEqual(user);
   });
   test("should get education by user id", async () => {
+    // TODO feedback: mock数据不需要这么复杂
     const educations = [
       {
         userId: 1,

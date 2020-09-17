@@ -3,6 +3,8 @@ import $ from "jquery";
 export const getEducationHtml = (educations) => {
   let educationHtml = "";
   educations.forEach((education) => {
+    // TODO feedback: education用ul li更符合语义
+    // TODO feedback:不建议使用div
     const itemHtml = `<section class="education-element">
       <div class="element-year">
         ${education.year}
