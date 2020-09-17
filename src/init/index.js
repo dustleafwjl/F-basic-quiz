@@ -2,11 +2,11 @@ import { getUserInfo, getEducationsByUserId } from "../api";
 import { renderUserInfo, renderEducation } from "../render";
 
 function getUserId() {
-  const pathSearchArr = window.location.search.replace("?", "").split("=");
-  if (pathSearchArr[0] === "userId") {
-    return pathSearchArr[1];
+  const pathArr = window.location.path.split("/");
+  if (pathArr[1] === "users" && pathArr.length === 3) {
+    return pathArr[2];
   }
-  return 1;
+  return undefined;
 }
 
 const initUserId = getUserId();
